@@ -10,9 +10,7 @@ function App() {
   }
 
   function addItem() {
-    setItems(function (prevItems) {
-      return [...prevItems, inputText];
-    });
+    setItems((prevItems) => [...prevItems, inputText]);
     setInputText("");
   }
 
@@ -29,9 +27,9 @@ function App() {
       </div>
       <div>
         <ul>
-          {items.map(function (toDoItem) {
-            return <li>{toDoItem}</li>;
-          })}
+          {items.map((toDoItem) => (
+            <li>{toDoItem}</li>
+          ))}
         </ul>
       </div>
     </div>
